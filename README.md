@@ -1,14 +1,16 @@
+
 ### `README.md` file
 
 ```markdown
-# Introdcution
+# Introduction
 
 The **Graduation 1** project is a NestJS application using microservices to provide various APIs, including:
-- Retrieve student information (name + student ID)
-- Return the current date and time on the server
-- Get an email address with student ID and student name
-- Fetch exchange rates from Vietcombank
+- Retrieve student information (name + student ID).
+- Return the current date and time on the server.
+- Get an email address with student ID and student name.
+- Fetch exchange rates from Vietcombank.
 - Transform the text to QRCode.
+- Generate the Banking QRCode for Online Banking.
 
 ## 1. Installation
 
@@ -144,5 +146,18 @@ GET http://localhost:3000/gr1/qrcode?text=HelloWorld
 
 - **Response**: A PNG image of the QR code will be returned and displayed in the browser.
 
+### 2.6. Return a NAPAS QRCode
 
+- **Endpoint**: `/gr1/generate-vietqr`
+- **Method**: POST
+- **Parameter**: `text` - The text to be encoded into a QR code.
+- **Function**: Return a QR code image for the given text.
+- **Example**:
+
+```
+GET http://localhost:3000/gr1/qrcode?text=HelloWorld
+```
+
+- **Response**: A PNG image of the QR code will be returned and displayed in the browser.
+```
 
