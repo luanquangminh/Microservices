@@ -149,7 +149,14 @@ GET http://localhost:3000/gr1/qrcode?text=HelloWorld
 
 - **Endpoint**: `/gr1/generate-vietqr`
 - **Method**: POST
-- **Parameter**: `text` - The text to be encoded into a QR code.
+- **Parameter**:
+                  accountNo: The account number for the payment.
+                  accountName: The account name for the payment.
+                  acqId: The acquiring bank ID (e.g., "970415").
+                  amount: The amount in VND for the transaction.
+                  addInfo: Additional information for the transaction (optional).
+                  format: The format of the QR code (e.g., "text").
+                  template: The template type (e.g., "compact").
 - **Function**: Return a QR code image for the given text.
 - **Example**:
 
