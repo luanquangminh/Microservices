@@ -15,4 +15,5 @@ export declare class Gr1Controller {
     };
     layTigia(): Promise<any>;
     genQR(text: string, res: Response): Promise<Response<any, Record<string, any>>>;
+    generateVietQR(body: any, res: Response): Promise<void>;
 }

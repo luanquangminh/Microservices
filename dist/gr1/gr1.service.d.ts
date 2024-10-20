@@ -11,4 +11,6 @@ export declare class Gr1Service {
     };
     layTigia(): Promise<any>;
     genQR(text: string): Promise<Buffer>;
+    vietQR(): Promise<Buffer>;
+    generateVietQR(accountNo: string, accountName: string, acqId: string, amount: number, addInfo: string, format: string, template: string): Promise<string>;
 }

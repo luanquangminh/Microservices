@@ -44,6 +44,34 @@ let Gr1Service = class Gr1Service {
         const qrCodeBuffer = await qrcode.toBuffer(text, { type: 'png' });
         return qrCodeBuffer;
     }
+    async vietQR() {
+        const qr_VietQRcode = await this.genQR('https://api.vietqr.io/v2/banks');
+        return qr_VietQRcode;
+    }
+    async generateVietQR(accountNo, accountName, acqId, amount, addInfo, format, template) {
+        try {
+            const response = await axios_1.default.post('https://api.vietqr.io/v2/generate', {
+                accountNo,
+                accountName,
+                acqId,
+                amount,
+                addInfo,
+                format,
+                template
+            }, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-api-key': '0d9923fd-3f54-4094-aaa9-d02b99570b49',
+                    'x-client-id': 'fde3ba5e-f574-4460-af80-1cdf2d978fa5'
+                }
+            });
+            const qrDataURL = response.data.data.qrDataURL;
+            return qrDataURL;
+        }
+        catch (error) {
+            throw new Error(`Failed to generate VietQR: ${error.response ? error.response.data : error.message}`);
+        }
+    }
 };
 exports.Gr1Service = Gr1Service;
 exports.Gr1Service = Gr1Service = __decorate([

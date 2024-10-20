@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Gr1Controller = void 0;
 const common_1 = require("@nestjs/common");
 const gr1_service_1 = require("./gr1.service");
+const swagger_1 = require("@nestjs/swagger");
 let Gr1Controller = class Gr1Controller {
     constructor(gr1Service) {
         this.gr1Service = gr1Service;
@@ -35,6 +36,14 @@ let Gr1Controller = class Gr1Controller {
         const qrCode = await this.gr1Service.genQR(text);
         res.setHeader('Content-Type', 'image/png');
         return res.send(qrCode);
+    }
+    async generateVietQR(body, res) {
+        const { accountNo, accountName, acqId, amount, addInfo, format, template } = body;
+        const qrDataURL = await this.gr1Service.generateVietQR(accountNo, accountName, acqId, amount, addInfo, format, template);
+        const base64Data = qrDataURL.replace(/^data:image\/png;base64,/, '');
+        const imgBuffer = Buffer.from(base64Data, 'base64');
+        res.setHeader('Content-Type', 'image/png');
+        res.send(imgBuffer);
     }
 };
 exports.Gr1Controller = Gr1Controller;
@@ -72,6 +81,35 @@ __decorate([
     __metadata("design:paramtypes", [String, Object]),
     __metadata("design:returntype", Promise)
 ], Gr1Controller.prototype, "genQR", null);
+__decorate([
+    (0, common_1.Post)('generate-vietqr'),
+    (0, swagger_1.ApiBody)({
+        schema: {
+            type: 'object',
+            properties: {
+                accountNo: { type: 'string', example: '11336668888' },
+                accountName: { type: 'string', example: 'QUỸ VẮC XIN PHÒNG CHỐNG COVID' },
+                acqId: { type: 'string', example: '970415' },
+                amount: { type: 'number', example: 79000 },
+                addInfo: { type: 'string', example: 'Ủng Hộ Quỹ Vắc Xin' },
+                format: { type: 'string', example: 'text' },
+                template: { type: 'string', example: 'compact' }
+            }
+        }
+    }),
+    (0, swagger_1.ApiResponse)({
+        status: 201,
+        description: 'Generated QR Code as PNG',
+        content: {
+            'image/png': {}
+        }
+    }),
+    __param(0, (0, common_1.Body)()),
+    __param(1, (0, common_1.Res)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], Gr1Controller.prototype, "generateVietQR", null);
 exports.Gr1Controller = Gr1Controller = __decorate([
     (0, common_1.Controller)('gr1'),
     __metadata("design:paramtypes", [gr1_service_1.Gr1Service])

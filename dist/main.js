@@ -6,8 +6,8 @@ const swagger_1 = require("@nestjs/swagger");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     const config = new swagger_1.DocumentBuilder()
-        .setTitle('Microservice Example')
-        .setDescription('The microservice API description')
+        .setTitle('gr1 Project')
+        .setDescription('API documentation for the gr1 project')
         .setVersion('1.0')
         .build();
     const document = swagger_1.SwaggerModule.createDocument(app, config);
