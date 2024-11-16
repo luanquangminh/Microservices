@@ -17,7 +17,6 @@ Use the following command to clone the project from GitHub to your local machine
 ```bash
 git clone https://github.com/luanquangminh/Microservices.git
 ```
-### Step 2: Install dependencies
 
 ### Step 2: Install dependencies
 
@@ -48,7 +47,7 @@ The application will run on `http://localhost:3000`.
 - **Example**:
 
 ```
-GET http://localhost:3000/gr1/aboutus
+http://localhost:3000/api#/default/Gr1Controller_getAboutus
 ```
 
 - **Response**:
@@ -68,7 +67,7 @@ GET http://localhost:3000/gr1/aboutus
 - **Example**:
 
 ```
-GET http://localhost:3000/gr1/today
+http://localhost:3000/api#/default/Gr1Controller_getTodayDateTime
 ```
 
 - **Response**:
@@ -90,7 +89,7 @@ GET http://localhost:3000/gr1/today
 - **Example**:
 
 ```
-GET http://localhost:3000/gr1/generate-email?mssv=20221111&name=Nguyen%20Van%20A
+http://localhost:3000/api#/default/Gr1Controller_generateEmail
 ```
 
 - **Response**:
@@ -109,7 +108,7 @@ GET http://localhost:3000/gr1/generate-email?mssv=20221111&name=Nguyen%20Van%20A
 - **Example**:
 
 ```
-GET http://localhost:3000/gr1/vcb-exchange-rate
+http://localhost:3000/api#/default/Gr1Controller_layTigia
 ```
 
 - **Response**:
@@ -138,7 +137,7 @@ GET http://localhost:3000/gr1/vcb-exchange-rate
 - **Example**:
 
 ```
-GET http://localhost:3000/gr1/qrcode?text=HelloWorld
+http://localhost:3000/api#/default/Gr1Controller_genQR
 ```
 
 - **Response**: A PNG image of the QR code will be returned and displayed in the browser.
@@ -152,7 +151,7 @@ GET http://localhost:3000/gr1/qrcode?text=HelloWorld
 - **Example**:
 
 ```
-GET http://localhost:3000/gr1/qrcode?text=HelloWorld
+http://localhost:3000/api#/default/Gr1Controller_generateVietQR
 ```
 
 - **Response**: A PNG image of the QR code will be returned and displayed in the browser.
