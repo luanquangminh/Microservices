@@ -159,6 +159,8 @@ http://localhost:3000/api#/default/Gr1Controller_generateVietQR
 - **Response**: A PNG image of the QR code will be returned and displayed in the browser.
  # [More details about Vietnamese Banks Provided by The State Bank of Vietnam](./nhnn.json)
  # [Get your API and Client ID here](https://my.vietqr.io/)
+ # [Guide to match your Client with the API of the banks](./API.pdf)
+
 
  
 ```
