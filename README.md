@@ -1,6 +1,5 @@
 
 
-```markdown
 # Introduction
 
 The **Graduation 1** project is a NestJS application using microservices to provide various APIs, including:
@@ -11,8 +10,6 @@ The **Graduation 1** project is a NestJS application using microservices to prov
 - Transform the text to QRCode.
 - Generate the Banking QRCode for Online Banking.
 
-## 1. Installation
-
 ### Step 1: Clone the project
 
 Use the following command to clone the project from GitHub to your local machine:
@@ -20,6 +17,7 @@ Use the following command to clone the project from GitHub to your local machine
 ```bash
 git clone https://github.com/luanquangminh/Microservices.git
 ```
+### Step 2: Install dependencies
 
 ### Step 2: Install dependencies
 
