@@ -9,6 +9,7 @@ The **Graduation 1** project is a NestJS application using microservices to prov
 - Fetch exchange rates from Vietcombank.
 - Transform the text to QRCode.
 - Generate the Banking QRCode for Online Banking.
+[More details about APIs](./details.md)
 
 ### Step 1: Clone the project
 
