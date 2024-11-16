@@ -127,8 +127,6 @@ x-powered-by: Express
 | 500       | Internal Server Error     |
 
 ---
-Dưới đây là cách viết tài liệu này thành một file Markdown để sử dụng trên GitHub:
-
 
 # API Documentation: Generate Email Endpoint
 
@@ -504,7 +502,8 @@ http://localhost:3000/gr1/qrcode?text=Hello
 
 The response body contains the QR code image. Below is an example:
 
-![QR Code](data:image/png;base64,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)
+![53302756-19e4-4e00-b984-137dd8679caa](https://github.com/user-attachments/assets/c49abfd5-679f-47d6-adfe-8e0189660437)
+
 
 ### Response Headers
 
@@ -540,4 +539,106 @@ x-powered-by: Express
 - **Example Usage**:
   - You can save the QR code image or embed it directly in a web application.
 
+# API Documentation: Generate VietQR Code
+
+## Overview
+
+This endpoint generates a VietQR code as a PNG image based on the provided payment details.
+
+---
+
+## Request Example
+
+### CURL Command
+
+```bash
+curl -X 'POST' \
+  'http://localhost:3000/gr1/generate-vietqr' \
+  -H 'accept: image/png' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "accountNo": "113366688888",
+    "accountName": "QUỸ VẮC XIN PHÒNG CHỐNG COVID",
+    "acqId": "970415",
+    "amount": 79000,
+    "addInfo": "Ủng Hộ Quỹ Vắc Xin",
+    "format": "text",
+    "template": "compact"
+  }'
+```
+
+### Request URL
+
+```
+http://localhost:3000/gr1/generate-vietqr
+```
+
+### Request Body (JSON)
+
+```json
+{
+  "accountNo": "113366688888",
+  "accountName": "QUỸ VẮC XIN PHÒNG CHỐNG COVID",
+  "acqId": "970415",
+  "amount": 79000,
+  "addInfo": "Ủng Hộ Quỹ Vắc Xin",
+  "format": "text",
+  "template": "compact"
+}
+```
+
+---
+
+## Server Response
+
+### HTTP Status Code
+
+`201 Created`
+
+### Response Body
+
+The response contains the generated QR code as a PNG image. Below is an example:
+
+![18c3e628-98a5-4822-827b-cd7df5a8ea4d](https://github.com/user-attachments/assets/0f72cfb4-293f-465c-ab63-d8d14f03b871)
+
+
+### Response Headers
+
+```
+connection: keep-alive
+content-length: 66145
+content-type: image/png
+date: Sat, 16 Nov 2024 14:32:10 GMT
+etag: W/"10261-OYurasDcSonOc4sCkZz8tFFQ0K8"
+keep-alive: timeout=5
+x-powered-by: Express
+```
+
+---
+
+## Responses Table
+
+| HTTP Code | Description                  |
+|-----------|------------------------------|
+| 201       | Generated QR code as PNG     |
+| 400       | Bad Request - Invalid input  |
+| 500       | Internal Server Error        |
+
+---
+
+## Notes
+
+- **Parameters**:
+  - `accountNo`: The account number to generate the QR code for.
+  - `accountName`: The name associated with the account.
+  - `acqId`: The acquiring institution ID.
+  - `amount`: The transaction amount.
+  - `addInfo`: Additional information for the QR code.
+  - `format`: Specifies the data format (e.g., `text`).
+  - `template`: The template style for the QR code (e.g., `compact`).
+- **Content-Type**:
+  - The response is a PNG image (`content-type: image/png`).
+- **Example Usage**:
+  - The QR code can be scanned to initiate payment or other related actions.
+  - The error message will return if errors occur in inputing phase.
 ```
